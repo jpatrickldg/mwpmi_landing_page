@@ -1,6 +1,8 @@
 .offers {
+  margin-top: 36px;
   h2 {
     text-align: center;
+    margin: 0;
   }
 
   .cards-container {
@@ -9,6 +11,7 @@
     justify-content: center;
     gap: 16px;
     padding-inline: 24px;
+    margin-top: 12px;
 
     .ant-card {
       flex: 1;
