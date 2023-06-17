@@ -1,11 +1,20 @@
-import { Layout } from 'antd'
-import "./Content.scss"
-import React from 'react'
+import { Button, Card, Layout } from "antd";
+import "./Content.scss";
+import React from "react";
+import Hero from "./Hero";
+import Offers from "./Offers";
+import Gallery from "./Gallery";
+import Inquire from "./Inquire";
 
 const Content = () => {
   return (
-    <Layout.Content className='home-content'>Content</Layout.Content>
-  )
-}
+    <div className="home-content">
+      <Hero />
+      <Offers />
+      <Gallery />
+      <Inquire />
+    </div>
+  );
+};
 
-export default Content
+export default Content;

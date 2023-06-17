@@ -1,8 +1,25 @@
 .home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
-  color: white;
   height: 64px;
   padding-inline: 50px;
-  line-height: 64px;
-  background-color: #7dbcea;
+
+  .logo-container {
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+
+    .main-logo {
+      font-size: 24px;
+    }
+
+    .sub-logo {
+      font-size: 12px;
+    }
+  }
 }
