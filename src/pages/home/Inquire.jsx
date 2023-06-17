@@ -1,18 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Inquire.scss";
-import { Button, DatePicker, Form, Input, Radio, Select } from "antd";
+import {
+  Button,
+  DatePicker,
+  Form,
+  Input,
+  Radio,
+  Select,
+  notification,
+} from "antd";
 
 const { Option } = Select;
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 const Inquire = () => {
   const [form] = Form.useForm();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (values) => {
+  const handleSubmit = async (values) => {
     const formattedValues = {
       ...values,
       move_in_date: values.move_in_date.format("YYYY-MM-DD"),
     };
     console.log(formattedValues);
+    console.log(JSON.stringify(formattedValues));
+
+    try {
+      setIsLoading(true);
+      const response = await fetch("http://localhost:3000/inquiries", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formattedValues),
+      });
+
+      if (response.ok) {
+        notification.success({
+          message: "Inquiry Sent",
+          description:
+            "Your inquiry has been sent and will be under review by our team. Kindly keep your lines open for us to contact you. Thank you.",
+        });
+        form.resetFields();
+        scrollToTop();
+      } else {
+        notification.error({
+          message: "Failed to Submit Inquiry",
+          description:
+            "There has been an error processing your inquiry. Kindly try again later.",
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      notification.error({
+        message: "Failed to Submit Inquiry",
+        description:
+          "There has been an error processing your inquiry. Kindly try again later.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <section class="inquire" id="inquire">
@@ -104,6 +157,22 @@ const Inquire = () => {
               </Radio.Group>
             </Form.Item>
             <Form.Item
+              name="occupation"
+              label="Occupation"
+              rules={[
+                {
+                  required: true,
+                  message: "Please select your occupation",
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Radio.Group>
+                <Radio value="student">Student</Radio>
+                <Radio value="reviewee">Reviewee</Radio>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
               name="location_preference"
               label="Preferred Location"
               rules={[
@@ -154,8 +223,13 @@ const Inquire = () => {
               <DatePicker />
             </Form.Item>
             <Form.Item>
-              <Button type="primary" htmlType="submit" className="submit">
-                Submit
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="submit"
+                disabled={isLoading}
+              >
+                {isLoading ? "Loading..." : "Submit"}
               </Button>
             </Form.Item>
           </Form>
