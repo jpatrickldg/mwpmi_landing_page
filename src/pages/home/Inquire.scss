@@ -1,6 +1,6 @@
 .inquire {
   position: relative;
-  height: 1000px;
+  height: 900px;
   background-image: url("https://images.pexels.com/photos/7635919/pexels-photo-7635919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-position: center;
@@ -12,7 +12,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 60%;
+    width: 90%;
     text-align: left;
     background-color: rgba(255, 255, 255, 0.607);
     padding: 24px;
@@ -22,19 +22,34 @@
       font-size: 24px;
       text-align: center;
       margin: 0;
+      margin-bottom: 24px;
     }
 
-    .inquiry-form {
-      .ant-form-item {
-        margin-bottom: 12px;
+    .form-map-container {
+      display: flex;
+      gap: 24px;
 
-        .ant-form-item-label {
-          font-weight: 500;
-          padding-bottom: 4px;
+      .map-container {
+        height: 600px;
+        img {
+          display: block;
+          height: 100%;
         }
+      }
 
-        .submit {
-          margin-top: 16px;
+      .inquiry-form {
+        flex: 1;
+        .ant-form-item {
+          margin-bottom: 12px;
+
+          .ant-form-item-label {
+            font-weight: 700;
+            padding-bottom: 4px;
+          }
+
+          .submit {
+            margin-top: 16px;
+          }
         }
       }
     }

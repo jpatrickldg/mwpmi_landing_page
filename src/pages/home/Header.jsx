@@ -10,13 +10,6 @@ const Header = () => {
         <span className="sub-logo">Property Management Inc.</span>
       </div>
       <div className="btn-container">
-        <a
-          href="http://localhost:3000/portal"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button type="text">Login</Button>
-        </a>
         <a href="#inquire">
           <Button type="primary">Inquire Now</Button>
         </a>

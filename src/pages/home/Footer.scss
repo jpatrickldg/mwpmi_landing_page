@@ -2,5 +2,67 @@
   text-align: center;
   color: white;
   background-color: #7dbcea;
-  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+
+  div {
+    h3 {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  div:first-child {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: white;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    span {
+      margin-top: -8px;
+    }
+  }
+
+  div:nth-child(2) {
+    h3 {
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  div:nth-child(3) {
+    img {
+      display: block;
+      height: 200px;
+    }
+  }
+  div:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    img {
+      display: block;
+      height: 50px;
+    }
+
+    img:hover {
+      height: 55px;
+    }
+  }
 }

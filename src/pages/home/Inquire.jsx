@@ -18,140 +18,148 @@ const Inquire = () => {
     <section class="inquire" id="inquire">
       <div class="inquire-content">
         <h3>Inquire Now</h3>
-        <Form
-          className="inquiry-form"
-          form={form}
-          layout="vertical"
-          requiredMark={false}
-          onFinish={handleSubmit}
-        >
-          <Form.Item
-            name="email"
-            label="E-mail"
-            rules={[
-              {
-                type: "email",
-                message: "The email you enter is not valid",
-              },
-              {
-                required: true,
-                message: "Please enter your email",
-              },
-            ]}
+        <div className="form-map-container">
+          <div className="map-container">
+            <img
+              src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.6435-9/116666476_3198372293565893_1471473275625836916_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cdbe9c&_nc_eui2=AeF6xfg9QGCkI8ZtGD4F1Kc5OS6LJqR-rtc5LosmpH6u1zwrZsOJ5YY2_9a3ulHiG24&_nc_ohc=GG1CmXBrqv4AX92bTtn&_nc_ht=scontent.fmnl4-4.fna&oh=00_AfDcJeW0l0JtW2c6pwxWmO11nXZiy8uTzHvSgw7CZZbbZA&oe=64B4DC8F"
+              alt=""
+            />
+          </div>
+          <Form
+            className="inquiry-form"
+            form={form}
+            layout="vertical"
+            requiredMark={false}
+            onFinish={handleSubmit}
           >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="first_name"
-            label="First Name"
-            rules={[
-              {
-                required: true,
-                message: "Please enter your first name",
-                whitespace: true,
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="last_name"
-            label="Last Name"
-            rules={[
-              {
-                required: true,
-                message: "Please enter your last name",
-                whitespace: true,
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="contact_no"
-            label="Contact No."
-            rules={[
-              {
-                required: true,
-                message: "Please enter your contact number",
-                whitespace: true,
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="gender"
-            label="Gender"
-            rules={[
-              {
-                required: true,
-                message: "Please select your gender",
-                whitespace: true,
-              },
-            ]}
-          >
-            <Radio.Group>
-              <Radio value="male">Male</Radio>
-              <Radio value="female">Female</Radio>
-            </Radio.Group>
-          </Form.Item>
-          <Form.Item
-            name="location_preference"
-            label="Preferred Location"
-            rules={[
-              {
-                required: true,
-                message: "Please select your preferred location",
-              },
-            ]}
-          >
-            <Select placeholder="Please select your preferred location">
-              <Option value="Recto">Recto</Option>
-              <Option value="Espana">Espana</Option>
-              <Option value="Tacio">Tacio</Option>
-              <Option value="Vicente Cruz">Vicente Cruz</Option>
-            </Select>
-          </Form.Item>
-          <Form.Item
-            name="room_type"
-            label="Accomodation"
-            rules={[
-              {
-                required: true,
-                message: "Please select your preferred type of accomodation",
-              },
-            ]}
-          >
-            <Select placeholder="Please select your preferred type of accomodation">
-              <Option value="bedspace">Bedspace</Option>
-              <Option value="studio">Studio Apartment</Option>
-              <Option value="boarding house">Boarding House</Option>
-              <Option value="condo empty">Condo - Empty</Option>
-              <Option value="condo fully-furnished">
-                Condo - Fully Furnished
-              </Option>
-            </Select>
-          </Form.Item>
-          <Form.Item
-            name="move_in_date"
-            label="Move-in Date"
-            rules={[
-              {
-                type: "object",
-                required: true,
-                message: "Please select your target move-in date",
-              },
-            ]}
-          >
-            <DatePicker />
-          </Form.Item>
-          <Form.Item>
-            <Button type="primary" htmlType="submit" className="submit">
-              Submit
-            </Button>
-          </Form.Item>
-        </Form>
+            <Form.Item
+              name="email"
+              label="E-mail"
+              rules={[
+                {
+                  type: "email",
+                  message: "The email you enter is not valid",
+                },
+                {
+                  required: true,
+                  message: "Please enter your email",
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="first_name"
+              label="First Name"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your first name",
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="last_name"
+              label="Last Name"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your last name",
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="contact_no"
+              label="Contact No."
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your contact number",
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="gender"
+              label="Gender"
+              rules={[
+                {
+                  required: true,
+                  message: "Please select your gender",
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Radio.Group>
+                <Radio value="male">Male</Radio>
+                <Radio value="female">Female</Radio>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              name="location_preference"
+              label="Preferred Location"
+              rules={[
+                {
+                  required: true,
+                  message: "Please select your preferred location",
+                },
+              ]}
+            >
+              <Select placeholder="Please select your preferred location">
+                <Option value="Recto">Recto</Option>
+                <Option value="Espana">Espana</Option>
+                <Option value="Tacio">Tacio</Option>
+                <Option value="Vicente Cruz">Vicente Cruz</Option>
+              </Select>
+            </Form.Item>
+            <Form.Item
+              name="room_type"
+              label="Accomodation"
+              rules={[
+                {
+                  required: true,
+                  message: "Please select your preferred type of accomodation",
+                },
+              ]}
+            >
+              <Select placeholder="Please select your preferred type of accomodation">
+                <Option value="bedspace">Bedspace</Option>
+                <Option value="studio">Studio Apartment</Option>
+                <Option value="boarding house">Boarding House</Option>
+                <Option value="condo empty">Condo - Empty</Option>
+                <Option value="condo fully-furnished">
+                  Condo - Fully Furnished
+                </Option>
+              </Select>
+            </Form.Item>
+            <Form.Item
+              name="move_in_date"
+              label="Move-in Date"
+              rules={[
+                {
+                  type: "object",
+                  required: true,
+                  message: "Please select your target move-in date",
+                },
+              ]}
+            >
+              <DatePicker />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit" className="submit">
+                Submit
+              </Button>
+            </Form.Item>
+          </Form>
+        </div>
       </div>
     </section>
   );
