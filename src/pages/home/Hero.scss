@@ -36,3 +36,19 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
 }
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    height: 380px;
+    .hero-content {
+      width: 80%;
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

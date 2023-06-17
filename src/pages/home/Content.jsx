@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import Offers from "./Offers";
 import Gallery from "./Gallery";
 import Inquire from "./Inquire";
+import Location from "./Location";
 
 const Content = () => {
   return (
@@ -13,6 +14,7 @@ const Content = () => {
       <Offers />
       <Gallery />
       <Inquire />
+      <Location />
     </div>
   );
 };

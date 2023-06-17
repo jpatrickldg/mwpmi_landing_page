@@ -25,3 +25,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .home-header {
+    padding-inline: 20px;
+    .logo-container {
+      .main-logo {
+        font-size: 20px;
+      }
+    }
+  }
+}

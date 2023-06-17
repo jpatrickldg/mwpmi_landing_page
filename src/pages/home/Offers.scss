@@ -19,3 +19,21 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .offers {
+    .cards-container {
+      flex-direction: column;
+
+      .ant-card {
+        font-size: 13px;
+        .ant-card-head {
+          min-height: 40px;
+        }
+        .ant-card-body {
+          padding: 16px;
+        }
+      }
+    }
+  }
+}
