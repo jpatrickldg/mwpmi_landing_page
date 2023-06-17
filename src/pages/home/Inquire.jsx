@@ -10,6 +10,8 @@ import {
   notification,
 } from "antd";
 
+import dayjs from "dayjs";
+
 const { Option } = Select;
 
 const scrollToTop = () => {
@@ -136,9 +138,14 @@ const Inquire = () => {
                   message: "Please enter your contact number",
                   whitespace: true,
                 },
+                {
+                  pattern: /^09\d{9}$/,
+                  message:
+                    "Please enter a valid contact number starting with '09' and containing 11 digits",
+                },
               ]}
             >
-              <Input />
+              <Input placeholder="(e.g. 09123456789)" />
             </Form.Item>
             <Form.Item
               name="gender"
@@ -220,7 +227,11 @@ const Inquire = () => {
                 },
               ]}
             >
-              <DatePicker />
+              <DatePicker
+                disabledDate={(current) =>
+                  current && current.diff(dayjs(), "days") < 3
+                }
+              />
             </Form.Item>
             <Form.Item>
               <Button
