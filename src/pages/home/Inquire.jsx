@@ -28,6 +28,7 @@ const Inquire = () => {
   const handleSubmit = async (values) => {
     const formattedValues = {
       ...values,
+      birthdate: values.birthdate.format("YYYY-MM-DD"),
       move_in_date: values.move_in_date.format("YYYY-MM-DD"),
     };
     console.log(formattedValues);
@@ -146,6 +147,19 @@ const Inquire = () => {
               ]}
             >
               <Input placeholder="(e.g. 09123456789)" />
+            </Form.Item>
+            <Form.Item
+              name="birthdate"
+              label="Date of Birth"
+              rules={[
+                {
+                  type: "object",
+                  required: true,
+                  message: "Please select your date of birth",
+                },
+              ]}
+            >
+              <DatePicker />
             </Form.Item>
             <Form.Item
               name="gender"
