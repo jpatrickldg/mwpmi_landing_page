@@ -36,13 +36,16 @@ const Inquire = () => {
 
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:3000/inquiries", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formattedValues),
-      });
+      const response = await fetch(
+        "https://mwpmi-6c68844b289a.herokuapp.com/inquiries",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formattedValues),
+        }
+      );
 
       if (response.ok) {
         notification.success({
