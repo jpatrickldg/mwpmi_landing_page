@@ -152,6 +152,19 @@ const Inquire = () => {
               <Input placeholder="(e.g. 09123456789)" />
             </Form.Item>
             <Form.Item
+              name="address"
+              label="Address"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your address",
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
               name="birthdate"
               label="Date of Birth"
               rules={[
