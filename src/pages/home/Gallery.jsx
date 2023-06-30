@@ -2,12 +2,20 @@ import React from "react";
 import "./Gallery.scss";
 import { Carousel } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import Bedspace from "./Bedspace";
+import Studio from "./Studio";
+import Condo from "./Condo";
 
 const Gallery = () => {
   return (
     <section className="gallery">
       <h2>Gallery</h2>
-      <Carousel className="gallery-carousel" autoplay>
+      <div className="gallery-container">
+        <Bedspace />
+        <Studio />
+        <Condo />
+      </div>
+      {/* <Carousel className="gallery-carousel" autoplay>
         <div>
           <img
             src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/329241370_1148202752530561_2242798955756227963_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFto8cXtP1wZkPxW5BIdncXCM1-8ZeRA0AIzX7xl5EDQFnrMoB2EVgQ-dE3FiooD6I&_nc_ohc=cD7SkYWRxz8AX_gjnrx&_nc_ht=scontent.fmnl4-2.fna&oh=00_AfAyfR-bDwbBFCDcQEHz3gcEvYVdHMRnGnkj4iW3CCgiFg&oe=64923651"
@@ -62,7 +70,7 @@ const Gallery = () => {
             alt=""
           />
         </div>
-      </Carousel>
+      </Carousel> */}
     </section>
   );
 };

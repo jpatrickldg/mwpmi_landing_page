@@ -1,0 +1,31 @@
+.condo-container {
+  padding-inline: 40px;
+  .condo-text-container {
+    span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .condo-img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 10px;
+    margin-top: 8px;
+
+    .ant-img {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 100%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
