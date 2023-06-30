@@ -4,21 +4,27 @@
     text-align: center;
     margin: 0;
   }
-  .ant-carousel {
-    width: 100%;
-    margin: auto;
-    margin-top: 12px;
-    .gallery-carousel {
-      div {
-        height: 800px;
-        background-color: white;
-        img {
-          display: block;
-          height: 100%;
-          margin: auto;
-        }
-      }
-    }
+  // .ant-carousel {
+  //   width: 100%;
+  //   margin: auto;
+  //   margin-top: 12px;
+  //   .gallery-carousel {
+  //     div {
+  //       height: 800px;
+  //       background-color: white;
+  //       img {
+  //         display: block;
+  //         height: 100%;
+  //         margin: auto;
+  //       }
+  //     }
+  //   }
+  // }
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 16px;
   }
 }
 

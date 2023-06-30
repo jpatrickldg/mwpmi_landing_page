@@ -6,6 +6,9 @@ import Offers from "./Offers";
 import Gallery from "./Gallery";
 import Inquire from "./Inquire";
 import Location from "./Location";
+import Bedspace from "./Bedspace";
+import Studio from "./Studio";
+import Condo from "./Condo";
 
 const Content = () => {
   return (
