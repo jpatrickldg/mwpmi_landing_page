@@ -1,7 +1,11 @@
 .condo-container {
-  padding-inline: 40px;
+  padding: 12px 24px 24px;
+  background-color: white;
+  margin-inline: 24px;
+  border-radius: 6px;
   .condo-text-container {
     span {
+      color: rgba(0, 0, 0, 0.88);
       font-size: 20px;
       font-weight: 700;
     }
